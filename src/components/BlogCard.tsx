@@ -15,7 +15,7 @@ export default function BlogCard({ title, description, slug, coverImage, date }:
       <div className="bg-[#282828] p-4 rounded-lg hover:bg-[#383838] transition-colors">
         <div className="relative w-full aspect-square mb-4">
           <Image
-            src={coverImage}
+            src={coverImage.startsWith('http') ? coverImage : `/images/${coverImage}`}
             alt={title}
             fill
             className="object-cover rounded-md"

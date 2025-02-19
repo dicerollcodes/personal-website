@@ -8,7 +8,7 @@ export default function Blog() {
       title: "Building My First PC",
       description: "My first PC build that I could call my own",
       slug: "building-my-dream-pc",
-      coverImage: "/images/pc-build.jpg",
+      coverImage: "pc-build.jpg",
       date: "2022-02-28"
     },
     // Add more blog posts here
