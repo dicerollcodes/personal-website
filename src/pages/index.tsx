@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout';
 import NowPlaying from '@/components/NowPlaying';
 import Image from 'next/image';
-import albumCollage from '../../public/images/album-collage.png';
 
 export default function Home() {
   return (
@@ -18,10 +17,15 @@ export default function Home() {
           <div className="flex items-center gap-8">
             {/* Album Collage */}
             <div className="relative w-48 h-48 rounded-lg overflow-hidden">
-              <img
-                src="/images/album-collage.png"
+              <Image
+                src={`data:image/png;base64,${Buffer.from(
+                  require('fs').readFileSync('public/images/album-collage.png')
+                ).toString('base64')}`}
                 alt="Favorite Albums Collage"
-                className="object-cover w-full h-full"
+                width={192}
+                height={192}
+                className="object-cover"
+                priority
               />
             </div>
             

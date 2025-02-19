@@ -13,6 +13,23 @@ const nextConfig = {
     unoptimized: true,
     loader: 'default',
     path: '',
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(png|jpg|gif)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+          },
+        },
+      ],
+    });
+    return config;
   },
 }
 
