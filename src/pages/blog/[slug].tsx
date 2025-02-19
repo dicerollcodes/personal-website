@@ -2,11 +2,17 @@ import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 
-type Section = {
-  type: 'paragraph' | 'specs';
-  text?: string;
-  items?: string[];
+type ParagraphSection = {
+  type: 'paragraph';
+  text: string;
 };
+
+type SpecsSection = {
+  type: 'specs';
+  items: string[];
+};
+
+type Section = ParagraphSection | SpecsSection;
 
 type BlogPost = {
   title: string;
@@ -65,7 +71,7 @@ export default function BlogPost() {
   }
 
   const renderSection = (section: Section, index: number) => {
-    if (section.type === 'paragraph' && section.text) {
+    if (section.type === 'paragraph') {
       return (
         <p key={index} className="mb-6 text-gray-300 leading-relaxed">
           {section.text}
@@ -73,7 +79,7 @@ export default function BlogPost() {
       );
     }
     
-    if (section.type === 'specs' && section.items && section.items.length > 0) {
+    if (section.type === 'specs') {
       return (
         <div key={index} className="bg-[#282828] p-6 rounded-lg my-8">
           <h3 className="text-xl font-bold mb-4 text-green-400">Build Specs</h3>
