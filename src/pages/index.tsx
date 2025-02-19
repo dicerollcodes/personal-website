@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import NowPlaying from '@/components/NowPlaying';
 import Image from 'next/image';
+import albumCollage from '../../public/images/album-collage.png';
 
 export default function Home() {
   return (
@@ -16,13 +17,11 @@ export default function Home() {
           <h2 className="text-lg font-medium text-gray-400 mb-6">Favorite Albums</h2>
           <div className="flex items-center gap-8">
             {/* Album Collage */}
-            <div className="relative w-48 h-48 rounded-lg overflow-hidden flex-shrink-0">
-              <Image
+            <div className="relative w-48 h-48 rounded-lg overflow-hidden">
+              <img
                 src="/images/album-collage.png"
                 alt="Favorite Albums Collage"
-                fill
-                className="object-cover"
-                priority
+                className="object-cover w-full h-full"
               />
             </div>
             
