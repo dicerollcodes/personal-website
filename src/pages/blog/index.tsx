@@ -26,16 +26,6 @@ export default function Blog() {
           />
         ))}
       </div>
-      <div className="relative w-48 h-48 rounded-lg overflow-hidden">
-        <Image
-          src="/images/album-collage.png"
-          alt="Favorite Albums Collage"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
     </Layout>
   );
 } 
