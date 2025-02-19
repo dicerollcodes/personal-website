@@ -18,12 +18,10 @@ export default function Home() {
             {/* Album Collage */}
             <div className="relative w-48 h-48 rounded-lg overflow-hidden">
               <Image
-                src={`data:image/png;base64,${Buffer.from(
-                  require('fs').readFileSync('public/images/album-collage.png')
-                ).toString('base64')}`}
+                src="/images/album-collage.png"
                 alt="Favorite Albums Collage"
-                width={192}
-                height={192}
+                width={500}
+                height={500}
                 className="object-cover"
                 priority
               />
