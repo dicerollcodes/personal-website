@@ -2,7 +2,20 @@ import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 
-const blogPosts = {
+type Section = {
+  type: 'paragraph' | 'specs';
+  text?: string;
+  items?: string[];
+};
+
+type BlogPost = {
+  title: string;
+  date: string;
+  coverImage: string;
+  content: Section[];
+};
+
+const blogPosts: Record<string, BlogPost> = {
   'building-my-dream-pc': {
     title: "Building My First PC",
     date: "February 28, 2022",
@@ -28,7 +41,7 @@ const blogPosts = {
       },
       {
         type: 'paragraph',
-        text: "That computer became more than just a way to game with my friends. It was the machine I used to dive into programming, where I wrote my first lines of code, experimented with different projects, and even built tools to help my robotics team. It showed me that technology wasn't just about having the newest and best hardware, it was about making the most of what you had, solving problems, and constantly learning. What started as a way to play games became a tool that fueled my curiosity and set me on a path toward something much bigger."
+        text: "That computer became more than just a way to play games with my friends. It was the machine I used to dive into programming, where I wrote my first lines of code, experimented with different projects, and even built tools to help my robotics team. It showed me that technology wasn't just about having the newest and best hardware, it was about making the most of what you had, solving problems, and constantly learning. What started as a way to play games became a tool that fueled my curiosity and set me on a path toward something much bigger."
       }
     ]
   }
@@ -38,7 +51,7 @@ export default function BlogPost() {
   const router = useRouter();
   const { slug } = router.query;
   
-  const post = blogPosts[slug as keyof typeof blogPosts];
+  const post = blogPosts[slug as string];
 
   if (!post) {
     return (
@@ -50,6 +63,33 @@ export default function BlogPost() {
       </Layout>
     );
   }
+
+  const renderSection = (section: Section, index: number) => {
+    if (section.type === 'paragraph' && section.text) {
+      return (
+        <p key={index} className="mb-6 text-gray-300 leading-relaxed">
+          {section.text}
+        </p>
+      );
+    }
+    
+    if (section.type === 'specs' && section.items && section.items.length > 0) {
+      return (
+        <div key={index} className="bg-[#282828] p-6 rounded-lg my-8">
+          <h3 className="text-xl font-bold mb-4 text-green-400">Build Specs</h3>
+          <ul className="list-none space-y-2">
+            {section.items.map((item, i) => (
+              <li key={i} className="text-gray-300">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    return null;
+  };
 
   return (
     <Layout>
@@ -66,29 +106,7 @@ export default function BlogPost() {
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
         <div className="text-gray-400 mb-8">{post.date}</div>
         <div className="prose prose-invert max-w-none">
-          {post.content.map((section, index) => {
-            if (section.type === 'paragraph') {
-              return (
-                <p key={index} className="mb-6 text-gray-300 leading-relaxed">
-                  {section.text}
-                </p>
-              );
-            }
-            if (section.type === 'specs') {
-              return (
-                <div key={index} className="bg-[#282828] p-6 rounded-lg my-8">
-                  <h3 className="text-xl font-bold mb-4 text-green-400">Build Specs</h3>
-                  <ul className="list-none space-y-2">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="text-gray-300">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            }
-          })}
+          {post.content.map((section, index) => renderSection(section, index))}
         </div>
       </article>
     </Layout>
