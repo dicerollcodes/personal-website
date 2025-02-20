@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['i.scdn.co'], // Keep Spotify images domain for NowPlaying component
+    domains: ['i.scdn.co'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -12,21 +12,7 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(png|jpg|gif)$/i,
-      use: [
-        {
-          loader: 'url-loader',
-          options: {
-            limit: 8192,
-          },
-        },
-      ],
-    });
-    return config;
-  },
-  output: 'standalone',
-}
+  
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
