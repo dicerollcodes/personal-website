@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import SideBar from './SideBar';
 
 interface LayoutProps {
@@ -6,11 +6,29 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <div className="flex min-h-screen bg-[#121212]">
-      <SideBar />
-      <main className="flex-1 ml-64 p-8">
-        <div className="max-w-4xl pl-4">
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-full bg-[#282828] text-white"
+      >
+        {isSidebarOpen ? '×' : '☰'}
+      </button>
+
+      {/* Sidebar */}
+      <div className={`
+        fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0
+        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}>
+        <SideBar onClose={() => setIsSidebarOpen(false)} />
+      </div>
+
+      {/* Main Content */}
+      <main className="flex-1 w-full lg:ml-64 p-4 lg:p-8 mt-16 lg:mt-0">
+        <div className="max-w-4xl mx-auto">
           {children}
         </div>
       </main>
