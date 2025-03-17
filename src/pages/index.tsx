@@ -20,10 +20,8 @@ export default function Home() {
               <Image
                 src="/images/album-collage.png"
                 alt="Favorite Albums Collage"
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                width={300}
+                height={300}
               />
             </div>
             
