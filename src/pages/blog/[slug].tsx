@@ -25,7 +25,7 @@ const blogPosts: Record<string, BlogPost> = {
   'building-my-dream-pc': {
     title: "Building My First PC",
     date: "February 28, 2022",
-    coverImage: "/images/pc-build.jpg",
+    coverImage: "/img/pc-build.jpg",
     content: [
       {
         type: 'paragraph',
