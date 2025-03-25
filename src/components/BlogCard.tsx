@@ -17,8 +17,10 @@ export default function BlogCard({ title, description, slug, coverImage, date }:
           <Image
             src={coverImage.startsWith('http') ? coverImage : `/images/${coverImage}`}
             alt={title}
-            fill
+            width={300}
+            height={300}
             className="object-cover rounded-md"
+            priority
           />
         </div>
         <h3 className="font-bold text-base md:text-lg mb-2">{title}</h3>

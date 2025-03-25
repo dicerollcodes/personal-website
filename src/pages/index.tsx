@@ -20,8 +20,9 @@ export default function Home() {
               <Image
                 src="/images/album-collage.png"
                 alt="Favorite Albums Collage"
-                width={300}
-                height={300}
+                width={192}
+                height={192}
+                priority
               />
             </div>
             

@@ -104,8 +104,9 @@ export default function BlogPost() {
           <Image
             src={post.coverImage}
             alt={post.title}
-            fill
-            className="object-cover"
+            width={900}
+            height={500}
+            className="object-cover w-full h-full"
             priority
           />
         </div>
