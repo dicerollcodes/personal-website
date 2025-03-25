@@ -22,7 +22,7 @@ export default function Blog() {
           <BlogCard 
             key={post.slug} 
             {...post} 
-            coverImage={post.coverImage || '/images/placeholder.jpg'}
+            coverImage={post.coverImage}
           />
         ))}
       </div>

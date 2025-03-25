@@ -10,12 +10,16 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ title, description, slug, coverImage, date }: BlogCardProps) {
+  const imagePath = coverImage.startsWith('http') 
+    ? coverImage 
+    : (coverImage.includes('/') ? coverImage : `/${coverImage}`);
+
   return (
     <Link href={`/blog/${slug}`} className="group block w-full">
       <div className="bg-[#282828] p-4 rounded-lg hover:bg-[#383838] transition-colors">
         <div className="relative w-full aspect-square mb-4">
           <img
-            src={coverImage.startsWith('http') ? coverImage : `/img/${coverImage}`}
+            src={imagePath}
             alt={title}
             className="w-full h-full object-cover rounded-md"
           />

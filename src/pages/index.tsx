@@ -38,7 +38,7 @@ export default function Home() {
             {/* Album Collage */}
             <div className="relative w-full md:w-48 aspect-square md:h-48 rounded-lg overflow-hidden">
               <img
-                src="/img/album-collage.png"
+                src="/album-collage.png"
                 alt="Favorite Albums Collage"
                 className="w-full h-full object-cover"
               />
@@ -69,6 +69,10 @@ export default function Home() {
               <div>
                 <p className="text-sm mb-1">Img folder path:</p>
                 <img src="/img/album-collage.png?v=2" alt="Album Test 2" className="h-8 w-auto" />
+              </div>
+              <div>
+                <p className="text-sm mb-1">Root path:</p>
+                <img src="/album-collage.png?v=3" alt="Album Test 3" className="h-8 w-auto" />
               </div>
               <div>
                 <p className="text-sm mb-1">Absolute paths:</p>
