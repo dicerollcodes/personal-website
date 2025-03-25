@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
-import Image from 'next/image';
+import InlineImage from '@/components/InlineImage';
 
 type ParagraphSection = {
   type: 'paragraph';
@@ -101,11 +101,19 @@ export default function BlogPost() {
     <Layout>
       <article className="max-w-3xl mx-auto">
         <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden">
-          <img
-            src={post.coverImage}
-            alt={post.title}
-            className="w-full h-full object-cover"
-          />
+          {post.coverImage.includes('pc-build') ? (
+            <InlineImage
+              imageName="pc-build"
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src={post.coverImage}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
         <div className="text-gray-400 mb-8">{post.date}</div>

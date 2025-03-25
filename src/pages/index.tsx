@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import NowPlaying from '@/components/NowPlaying';
-import Image from 'next/image';
+import InlineImage from '@/components/InlineImage';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -37,8 +37,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Album Collage */}
             <div className="relative w-full md:w-48 aspect-square md:h-48 rounded-lg overflow-hidden">
-              <img
-                src="/album-collage.png"
+              <InlineImage
+                imageName="album-collage"
                 alt="Favorite Albums Collage"
                 className="w-full h-full object-cover"
               />
@@ -77,6 +77,10 @@ export default function Home() {
               <div>
                 <p className="text-sm mb-1">Absolute paths:</p>
                 <img src="https://picsum.photos/200/300" alt="Random image" className="h-8 w-auto" />
+              </div>
+              <div>
+                <p className="text-sm mb-1">Imgur hosted:</p>
+                <img src="https://i.imgur.com/KSvbRUr.png" alt="Imgur test" className="h-8 w-auto" />
               </div>
             </div>
           </div>
