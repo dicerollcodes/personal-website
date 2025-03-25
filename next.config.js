@@ -11,9 +11,15 @@ const nextConfig = {
         hostname: 'i.scdn.co',
       },
     ],
-    unoptimized: true,
   },
-  
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|svg)$/i,
+      type: 'asset/resource'
+    });
+    return config;
+  }
 };
 
 module.exports = nextConfig;
