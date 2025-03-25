@@ -101,13 +101,10 @@ export default function BlogPost() {
     <Layout>
       <article className="max-w-3xl mx-auto">
         <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden">
-          <Image
+          <img
             src={post.coverImage}
             alt={post.title}
-            width={900}
-            height={500}
-            className="object-cover w-full h-full"
-            priority
+            className="w-full h-full object-cover"
           />
         </div>
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>

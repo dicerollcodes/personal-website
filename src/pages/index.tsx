@@ -17,12 +17,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Album Collage */}
             <div className="relative w-full md:w-48 aspect-square md:h-48 rounded-lg overflow-hidden">
-              <Image
+              <img
                 src="/images/album-collage.png"
                 alt="Favorite Albums Collage"
-                width={192}
-                height={192}
-                priority
+                className="w-full h-full object-cover"
               />
             </div>
             

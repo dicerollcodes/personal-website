@@ -14,13 +14,10 @@ export default function BlogCard({ title, description, slug, coverImage, date }:
     <Link href={`/blog/${slug}`} className="group block w-full">
       <div className="bg-[#282828] p-4 rounded-lg hover:bg-[#383838] transition-colors">
         <div className="relative w-full aspect-square mb-4">
-          <Image
+          <img
             src={coverImage.startsWith('http') ? coverImage : `/images/${coverImage}`}
             alt={title}
-            width={300}
-            height={300}
-            className="object-cover rounded-md"
-            priority
+            className="w-full h-full object-cover rounded-md"
           />
         </div>
         <h3 className="font-bold text-base md:text-lg mb-2">{title}</h3>
