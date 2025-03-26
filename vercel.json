@@ -29,7 +29,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.(?:jpg|png|svg)",
+      "source": "/:path(.+)\\.(jpg|png|svg)",
       "headers": [
         {
           "key": "Cache-Control",
