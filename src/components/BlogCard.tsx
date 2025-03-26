@@ -13,10 +13,10 @@ export default function BlogCard({ title, description, slug, coverImage, date }:
     <Link href={`/blog/${slug}`} className="group block w-full">
       <div className="bg-[#282828] p-4 rounded-lg hover:bg-[#383838] transition-colors">
         <div className="relative w-full aspect-square mb-4">
-          {/* Use real image if it's pc-build, otherwise use placeholder */}
-          {coverImage === "pc-build.jpg" ? (
+          {/* Use real image if it's first-computer.png, otherwise use placeholder */}
+          {coverImage === "first-computer.png" ? (
             <img
-              src="/images/pc-build.jpg"
+              src="/images/first-computer.png"
               alt={title}
               className="w-full h-full object-cover rounded-md"
             />

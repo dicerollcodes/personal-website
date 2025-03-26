@@ -24,7 +24,7 @@ const blogPosts: Record<string, BlogPost> = {
   'building-my-dream-pc': {
     title: "Building My First PC",
     date: "February 28, 2022",
-    coverImage: "/pc-build.jpg",
+    coverImage: "first-computer.png",
     content: [
       {
         type: 'paragraph',
@@ -100,12 +100,12 @@ export default function BlogPost() {
     <Layout>
       <article className="max-w-3xl mx-auto">
         <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden">
-          {/* SVG placeholder */}
-          <svg viewBox="0 0 16 9" className="w-full h-full bg-[#444]">
-            <text x="8" y="5" fontFamily="Arial" fontSize="2" fill="white" textAnchor="middle">
-              {post.title}
-            </text>
-          </svg>
+          {/* Display the actual image instead of SVG placeholder */}
+          <img 
+            src={`/images/${post.coverImage}`} 
+            alt={post.title}
+            className="w-full h-full object-cover"
+          />
         </div>
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
         <div className="text-gray-400 mb-8">{post.date}</div>

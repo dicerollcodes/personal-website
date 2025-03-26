@@ -37,7 +37,7 @@ export default function Home() {
             {/* Album Collage */}
             <div className="relative w-full md:w-48 aspect-square md:h-48 rounded-lg overflow-hidden">
               <img 
-                src="/images/album-collage.png"
+                src="/images/collage.png"
                 alt="Collage of my favorite albums"
                 className="w-full h-full object-cover"
               />
