@@ -18,11 +18,11 @@ export default function Projects() {
       ]
     },
     {
-      title: "Tutor Booking Website",
-      tech: "Flask, JavaScript, Bootstrap",
+      title: "FRC Team 714 Scouting Application",
+      tech: "React, TypeScript, Express.js, MongoDB, TailwindCSS",
       points: [
-        "Developed a full stack booking platform that streamlined scheduling for 100+ tutoring sessions",
-        "Integrated secure user authentication and automated notifications to further improve scheduling efficiency"
+        "Developed a full-stack scouting application for FIRST Robotics Competition that tracked 100+ teams throughout the 2025 season",
+        "Improved match planning by 25% with comprehensive team data and performance analytics"
       ]
     }
   ];
