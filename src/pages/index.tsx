@@ -63,15 +63,15 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-sm mb-1">Images folder path:</p>
-                <img src="/images/album-collage.png?v=1" alt="Album Test" className="h-8 w-auto" />
+                <img src="/images/collage.png" alt="Album Test" className="h-8 w-auto" />
               </div>
               <div>
                 <p className="text-sm mb-1">Img folder path:</p>
-                <img src="/img/album-collage.png?v=2" alt="Album Test 2" className="h-8 w-auto" />
+                <img src="/images/first-computer.png" alt="Album Test 2" className="h-8 w-auto" />
               </div>
               <div>
                 <p className="text-sm mb-1">Root path:</p>
-                <img src="/album-collage.png?v=3" alt="Album Test 3" className="h-8 w-auto" />
+                <img src="/images/collage.png" alt="Album Test 3" className="h-8 w-auto" />
               </div>
               <div>
                 <p className="text-sm mb-1">Absolute paths:</p>
