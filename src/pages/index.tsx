@@ -52,34 +52,97 @@ export default function Home() {
         </div>
 
         {/* Debug Section */}
-        <div className="mt-12 p-4 bg-gray-800 rounded-lg">
-          <h2 className="text-lg font-medium mb-4">Debug Image Paths</h2>
-          <div>
-            <p className="mb-2">Testing direct image paths:</p>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
+        <div className="mt-12 p-6 bg-gray-800 rounded-lg">
+          <h2 className="text-lg font-medium mb-4 text-white">Debug Image Paths</h2>
+          
+          <div className="mb-8">
+            <p className="mb-4 text-gray-300">Testing direct image paths:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="border border-gray-700 p-2 rounded">
                 <p className="text-sm mb-1">Standard path:</p>
-                <img src="/vercel.svg" alt="Vercel Logo Test" className="h-8 w-auto" />
+                <div className="bg-white p-2 rounded flex items-center justify-center min-h-[80px]">
+                  <img src="/vercel.svg" alt="Vercel Logo Test" className="h-12 w-auto object-contain" />
+                </div>
               </div>
-              <div>
+              <div className="border border-gray-700 p-2 rounded">
                 <p className="text-sm mb-1">Images folder path:</p>
-                <img src="/images/collage.png" alt="Album Test" className="h-8 w-auto" />
+                <div className="bg-white p-2 rounded flex items-center justify-center min-h-[80px]">
+                  <img src="/images/collage.png" alt="Album Test" className="h-12 w-auto object-contain" />
+                </div>
               </div>
-              <div>
+              <div className="border border-gray-700 p-2 rounded">
                 <p className="text-sm mb-1">Img folder path:</p>
-                <img src="/images/first-computer.png" alt="Album Test 2" className="h-8 w-auto" />
+                <div className="bg-white p-2 rounded flex items-center justify-center min-h-[80px]">
+                  <img src="/images/first-computer.png" alt="Album Test 2" className="h-12 w-auto object-contain" />
+                </div>
               </div>
-              <div>
+              <div className="border border-gray-700 p-2 rounded">
                 <p className="text-sm mb-1">Root path:</p>
-                <img src="/images/collage.png" alt="Album Test 3" className="h-8 w-auto" />
+                <div className="bg-white p-2 rounded flex items-center justify-center min-h-[80px]">
+                  <img src="/images/collage.png" alt="Album Test 3" className="h-12 w-auto object-contain" />
+                </div>
               </div>
-              <div>
+              <div className="border border-gray-700 p-2 rounded">
                 <p className="text-sm mb-1">Absolute paths:</p>
-                <img src="https://picsum.photos/200/300" alt="Random image" className="h-8 w-auto" />
+                <div className="bg-white p-2 rounded flex items-center justify-center min-h-[80px]">
+                  <img src="https://picsum.photos/200/300" alt="Random image" className="h-20 w-auto object-contain" />
+                </div>
               </div>
-              <div>
+              <div className="border border-gray-700 p-2 rounded">
                 <p className="text-sm mb-1">Imgur hosted:</p>
-                <img src="https://i.imgur.com/KSvbRUr.png" alt="Imgur test" className="h-8 w-auto" />
+                <div className="bg-white p-2 rounded flex items-center justify-center min-h-[80px]">
+                  <img src="https://i.imgur.com/KSvbRUr.png" alt="Imgur test" className="h-20 w-auto object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Test Image Display Section */}
+          <div className="mb-8">
+            <h3 className="text-md font-medium mb-4 text-white">Test Images:</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="border border-gray-700 p-2 rounded">
+                <p className="text-sm mb-2 text-gray-300">Standard path:</p>
+                <div className="bg-gray-900 p-4 rounded">
+                  <img 
+                    src="/vercel.svg" 
+                    alt="Test" 
+                    className="w-full h-auto object-contain max-h-[120px]" 
+                  />
+                </div>
+              </div>
+              
+              <div className="border border-gray-700 p-2 rounded">
+                <p className="text-sm mb-2 text-gray-300">Images folder path:</p>
+                <div className="bg-gray-900 p-4 rounded">
+                  <img 
+                    src="/images/collage.png" 
+                    alt="Album Test" 
+                    className="w-full h-auto object-contain max-h-[120px]" 
+                  />
+                </div>
+              </div>
+              
+              <div className="border border-gray-700 p-2 rounded">
+                <p className="text-sm mb-2 text-gray-300">Root path:</p>
+                <div className="bg-gray-900 p-4 rounded">
+                  <img 
+                    src="/images/first-computer.png" 
+                    alt="Album Test 3" 
+                    className="w-full h-auto object-contain max-h-[120px]" 
+                  />
+                </div>
+              </div>
+              
+              <div className="border border-gray-700 p-2 rounded">
+                <p className="text-sm mb-2 text-gray-300">Absolute paths:</p>
+                <div className="bg-gray-900 p-4 rounded">
+                  <img 
+                    src="/images/first-computer.png" 
+                    alt="Album Test 2" 
+                    className="w-full h-auto object-contain max-h-[120px]" 
+                  />
+                </div>
               </div>
             </div>
           </div>
