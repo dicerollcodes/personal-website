@@ -8,10 +8,10 @@ interface InlineImageProps {
 }
 
 export default function InlineImage({ imageName, alt, className = "" }: InlineImageProps) {
-  // Simply use the paths directly from the public folder
+  // Use the images from the public/images directory
   const src = imageName === "album-collage" 
-    ? "/album-collage.png" 
-    : "/pc-build.jpg";
+    ? "/images/album-collage.png" 
+    : "/images/pc-build.jpg";
   
   return (
     <img 

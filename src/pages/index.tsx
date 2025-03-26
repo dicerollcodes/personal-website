@@ -1,6 +1,5 @@
 import Layout from '@/components/Layout';
 import NowPlaying from '@/components/NowPlaying';
-import InlineImage from '@/components/InlineImage';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -37,13 +36,11 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Album Collage */}
             <div className="relative w-full md:w-48 aspect-square md:h-48 rounded-lg overflow-hidden">
-              {/* Direct SVG image embedded into the component */}
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <rect width="100" height="100" fill="#333" />
-                <text x="50" y="50" fontFamily="Arial" fontSize="10" fill="white" textAnchor="middle">
-                  Album Collage
-                </text>
-              </svg>
+              <img 
+                src="/images/album-collage.png"
+                alt="Collage of my favorite albums"
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Spotify Widget */}
