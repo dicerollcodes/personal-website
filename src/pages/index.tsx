@@ -1,36 +1,58 @@
 import Layout from '@/components/Layout';
 import NowPlaying from '@/components/NowPlaying';
+import CurrentlyWorking from '@/components/CurrentlyWorking';
+import AnimatedName from '@/components/AnimatedName';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [showContent, setShowContent] = useState(false);
+  
+  useEffect(() => {
+    // Delay showing the content sections for a staggered animation effect
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 1000); // Reduced delay for a snappier feel
+    
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
     <Layout>
-      <div className="max-w-3xl px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">Hello, I'm Justin!</h1>
-        <p className="text-lg md:text-xl text-gray-400 mb-8">
-          I'm Justin Bustamante, an aspiring software engineer planning to major in computer science and math. I love building computers, playing video games (currently obsessed with Marvel Rivals), and blasting music whenever I can. My favorite artists are Travis Scott, beabadoobee, and Daniel Caesar.
-        </p>
-        
-        {/* Music Section */}
-        <div className="mt-8 md:mt-12">
-          <h2 className="text-lg font-medium text-gray-400 mb-6">Favorite Albums</h2>
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            {/* Album Collage */}
-            <div className="relative w-full md:w-48 rounded-lg overflow-hidden">
-              <img 
-                src="/images/collage.png"
-                alt="Collage of my favorite albums"
-                width="200"
-                height="200"
-                style={{width: '100%', height: 'auto', display: 'block'}}
-              />
-            </div>
+      <div className="w-full">
+        {/* Top Section - Name/Bio and Spotify */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 mb-8">
+          {/* Left Column - Name and Description */}
+          <div className="md:col-span-7">
+            <AnimatedName name="Hello, I'm Justin!" className="mb-4" />
             
-            {/* Spotify Widget */}
-            <div className="w-full md:flex-grow">
-              <h3 className="text-sm font-medium text-gray-400 mb-3">Currently Playing</h3>
+            <p className={`
+              text-base text-gray-400 transform transition-all duration-700
+              ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
+            `} style={{ transitionDelay: '200ms' }}>
+              I'm Justin Bustamante, an aspiring software engineer planning to major in computer science and math. 
+              I love building computers, playing video games (currently obsessed with Marvel Rivals), 
+              and blasting music whenever I can. My favorite artists are Travis Scott, beabadoobee, and Daniel Caesar.
+            </p>
+          </div>
+          
+          {/* Right Column - Spotify Widget */}
+          <div className="md:col-span-5 flex items-center">
+            <div className={`
+              transform transition-all duration-500 w-full
+              ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
+            `} style={{ transitionDelay: '200ms' }}>
               <NowPlaying />
             </div>
           </div>
+        </div>
+        
+        {/* Currently Working Section */}
+        <div className={`
+          transform transition-all duration-500 w-full
+          ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
+        `} style={{ transitionDelay: '300ms' }}>
+          <h2 className="text-lg font-medium text-green-400 mb-4">Currently Working On</h2>
+          <CurrentlyWorking />
         </div>
       </div>
     </Layout>

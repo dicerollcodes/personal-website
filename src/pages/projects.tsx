@@ -1,6 +1,18 @@
 import Layout from '@/components/Layout';
+import FadeIn from '@/components/FadeIn';
+import { useEffect, useState } from 'react';
 
 export default function Projects() {
+  const [showContent, setShowContent] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+  
   const projects = [
     {
       title: "Robotics Assistant",
@@ -29,18 +41,23 @@ export default function Projects() {
 
   return (
     <Layout>
-      <h1 className="text-4xl font-bold text-white mb-8">Projects</h1>
+      <FadeIn delay={100}>
+        <h1 className="text-4xl font-bold text-white mb-8">Projects</h1>
+      </FadeIn>
+      
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
-          <div key={index} className="bg-[#282828] p-6 rounded-lg hover:ring-2 hover:ring-green-500 transition-all">
-            <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-            <p className="text-green-400 mb-4">{project.tech}</p>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              {project.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          </div>
+          <FadeIn key={index} delay={200 + (index * 100)}>
+            <div className="bg-[#1E1E1E] p-6 rounded-lg border border-[#333333] h-full hover:border-green-500/50 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+              <p className="text-green-400 mb-4 text-sm">{project.tech}</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-1">
+                {project.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </FadeIn>
         ))}
       </div>
     </Layout>

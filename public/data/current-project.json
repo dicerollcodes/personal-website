@@ -1,0 +1,7 @@
+{
+  "title": "Personal Website",
+  "description": "Building and improving my personal website with Next.js and Tailwind CSS.",
+  "link": "https://github.com/dicerollcodes/personal-website",
+  "progress": 30,
+  "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+} 

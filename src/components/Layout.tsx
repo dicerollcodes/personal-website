@@ -20,15 +20,15 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Sidebar */}
       <div className={`
-        fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0
+        fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 lg:w-56
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <SideBar onClose={() => setIsSidebarOpen(false)} />
       </div>
 
       {/* Main Content */}
-      <main className="flex-1 w-full lg:ml-64 p-4 lg:p-8 mt-16 lg:mt-0">
-        <div className="max-w-4xl mx-auto">
+      <main className="flex-1 w-full p-0 mt-16 lg:mt-0">
+        <div className="p-6 md:p-10">
           {children}
         </div>
       </main>

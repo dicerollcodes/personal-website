@@ -20,7 +20,7 @@ export default function SideBar({ onClose }: SideBarProps) {
   };
 
   return (
-    <div className="w-64 bg-[#121212] p-6 h-screen overflow-y-auto">
+    <div className="w-56 bg-[#121212] p-5 h-screen border-r border-[#222222]">
       <div className="mb-8">
         <Link 
           href="/" 
