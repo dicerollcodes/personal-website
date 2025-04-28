@@ -11,6 +11,7 @@ interface WorkingOnProject {
 export default function CurrentlyWorking() {
   const [project, setProject] = useState<WorkingOnProject | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   
   useEffect(() => {
     async function fetchProjectData() {
@@ -23,6 +24,7 @@ export default function CurrentlyWorking() {
         setProject(data);
       } catch (error) {
         console.error('Error fetching project data:', error);
+        setError('Could not load project data');
       } finally {
         setLoading(false);
       }
@@ -41,10 +43,10 @@ export default function CurrentlyWorking() {
     );
   }
   
-  if (!project) {
+  if (error || !project) {
     return (
       <div className="bg-[#1E1E1E] rounded-lg p-6 border border-[#333333]">
-        <p className="text-gray-400">No project data available</p>
+        <p className="text-gray-400">{error || 'No project data available'}</p>
       </div>
     );
   }
