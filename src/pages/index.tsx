@@ -31,7 +31,7 @@ export default function Home() {
             `} style={{ transitionDelay: '200ms' }}>
               I'm Justin Bustamante, an aspiring software engineer major in computer science and math at Rutgers University-New Brunswick. 
               I love building computers, playing video games (currently addicted to Overwatch 2 & Valorant but learning how to play Tekken 8), 
-              and listening to music. My current favorite artists are The Marias, beabadoobee, and .
+              and listening to music. My current favorite artists are The Marias, beabadoobee, and LE SSERAFIM.
             </p>
           </div>
           
