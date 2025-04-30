@@ -9,8 +9,8 @@ interface AnimatedNameProps {
 
 export default function AnimatedName({ 
   name, 
-  delay = 100, 
-  letterDelay = 80, 
+  delay = 80,
+  letterDelay = 20,
   className = "" 
 }: AnimatedNameProps) {
   const [visibleChars, setVisibleChars] = useState(0);
@@ -47,14 +47,14 @@ export default function AnimatedName({
           <span 
             key={index}
             className={`
-              inline-block transition-all duration-300 transform
+              inline-block transition-all duration-200
               ${isVisible 
                 ? 'translate-y-0 opacity-100' 
                 : 'translate-y-8 opacity-0'}
               ${char === ' ' ? 'mr-2' : ''}
             `}
             style={{ 
-              transitionDelay: `${index * 40}ms`,
+              transitionDelay: `${index * 20}ms`,
             }}
           >
             {char}

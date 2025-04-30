@@ -8,10 +8,10 @@ export default function Home() {
   const [showContent, setShowContent] = useState(false);
   
   useEffect(() => {
-    // Delay showing the content sections for a staggered animation effect
+    // Delay showing the content sections until after name animation
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 1000); // Reduced delay for a snappier feel
+    }, 850); // Set to start right after name animation finishes
     
     return () => clearTimeout(timer);
   }, []);
@@ -26,21 +26,21 @@ export default function Home() {
             <AnimatedName name="Hello, I'm Justin!" className="mb-4" />
             
             <p className={`
-              text-base text-gray-400 transform transition-all duration-700
+              text-base text-gray-400 transform transition-all duration-300
               ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
-            `} style={{ transitionDelay: '200ms' }}>
+            `} style={{ transitionDelay: '0ms' }}>
               I'm Justin Bustamante, an aspiring software engineer and a student majoring in computer science and math at Rutgers University-New Brunswick. 
               I love building computers, playing video games (currently addicted to Overwatch 2 & Valorant but learning how to play Tekken 8), 
-              and listening to music. My current favorite artists are The Marias, beabadoobee, and LE SSERAFIM.
+              and listening to music. My current favorite artists are The Marias, beabadoobee, and LE&nbsp;SSERAFIM.
             </p>
           </div>
           
           {/* Right Column - Spotify Widget */}
           <div className="md:col-span-5 flex items-center">
             <div className={`
-              transform transition-all duration-500 w-full
+              transform transition-all duration-300 w-full pl-4 md:pl-8
               ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
-            `} style={{ transitionDelay: '200ms' }}>
+            `} style={{ transitionDelay: '50ms' }}>
               <NowPlaying />
             </div>
           </div>
@@ -48,9 +48,9 @@ export default function Home() {
         
         {/* Currently Working Section */}
         <div className={`
-          transform transition-all duration-500 w-full
+          transform transition-all duration-300 w-full
           ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
-        `} style={{ transitionDelay: '300ms' }}>
+        `} style={{ transitionDelay: '100ms' }}>
           <h2 className="text-lg font-medium text-green-400 mb-4">Currently Working On</h2>
           <CurrentlyWorking />
         </div>

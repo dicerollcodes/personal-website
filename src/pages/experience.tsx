@@ -16,9 +16,18 @@ export default function Experience() {
   const experiences = [
     {
       title: "Software Development Intern",
+      company: "Amazon",
+      location: "TBD",
+      date: "TBD",
+      points: [
+        "Internship secured for Summer 2026 through the Amazon Future Engineer scholarship."
+      ]
+    },
+    {
+      title: "Software Development Intern",
       company: "Audible Future Leaders",
       location: "Newark, NJ",
-      date: "Sept. 2024 - Present",
+      date: "Sept. 2024 - May 2025",
       points: [
         "Designed and built front-end logic through code analysis and optimization, increasing stability by 20%",
         "Developed 10+ interactive features that enhanced engagement and streamlined navigation",
@@ -29,7 +38,7 @@ export default function Experience() {
       title: "Lead Programmer",
       company: "Team 752 & 714 , Newark Board of Education",
       location: "Newark, NJ",
-      date: "Nov. 2022 - Present",
+      date: "Nov. 2022 - March 2025",
       points: [
         "Directed 2 programming teams (in Java and Python) to integrate advanced robotics controls",
         "Mentored team members on both practices and debugging, adding success in 15 matches",
