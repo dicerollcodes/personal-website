@@ -1,12 +1,11 @@
 # Justin Bustamante Personal Website
 
-My personal website built with Next.js, Tailwind CSS, and MongoDB.
+My personal website built with Next.js and Tailwind CSS.
 
 ## Setup Instructions
 
 ### Prerequisites
 - Node.js 14+ and npm
-- MongoDB Atlas account (for database)
 
 ### Installation
 

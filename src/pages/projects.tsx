@@ -55,7 +55,7 @@ export default function Projects() {
     },
     {
       title: "FRC Team 714 Scouting Application",
-      tech: "React, TypeScript, Express.js, MongoDB, TailwindCSS",
+      tech: "React, TypeScript, Express.js, TailwindCSS",
       points: [
         "Developed a full-stack scouting application for FIRST Robotics Competition that tracked 100+ teams throughout the 2025 season",
         "Improved match planning by 25% with comprehensive team data and performance analytics"
