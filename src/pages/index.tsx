@@ -2,6 +2,7 @@ import Layout from '@/components/Layout';
 import NowPlaying from '@/components/NowPlaying';
 import CurrentlyWorking from '@/components/CurrentlyWorking';
 import AnimatedName from '@/components/AnimatedName';
+import ACLeaves from '@/components/ACLeaves';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
   
   return (
     <Layout>
+      <ACLeaves />
       <div className="w-full">
         {/* Top Section - Name/Bio and Spotify */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 mb-8">

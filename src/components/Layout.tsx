@@ -1,5 +1,6 @@
 import { ReactNode, useState } from 'react';
 import SideBar from './SideBar';
+import FallingLeaves from './FallingLeaves';
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,6 +11,8 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="flex min-h-screen bg-[#121212]">
+      <FallingLeaves />
+      
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
