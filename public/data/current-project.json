@@ -1,7 +1,7 @@
 {
-  "title": "The Veronica",
-  "description": "Learning how to train my own neural network because my girlfriend is pretty funny (inspired off of The Donna From Suits).",
-  "link": "https://github.com/dicerollcodes/the-veronica",
+  "title": "Learning-NN",
+  "description": "Learning how to train my own neural network",
+  "link": "https://github.com/dicerollcodes/learning-nn",
   "progress": 0,
   "techStack": ["Python", "PyTorch", "NumPy", "Matplotlib"]
 } 
