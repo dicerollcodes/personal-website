@@ -19,8 +19,8 @@ const FallingLeaves: React.FC = () => {
     const initialLeaves = Array.from({ length: 15 }, (_, index) => ({
       id: index,
       left: Math.random() * 100, // Random horizontal position (0-100%)
-      animationDuration: 5 + Math.random() * 5, // Random duration between 5-10s
-      delay: Math.random() * 5, // Random delay 0-5s
+      animationDuration: 0, // Random duration between 5-10s
+      delay: 0, // more leavse 
       size: 15 + Math.random() * 10, // Random size between 15-25px
       rotation: Math.random() * 360, // Random initial rotation
     }));

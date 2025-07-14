@@ -1,7 +1,7 @@
 {
-  "title": "Learning-NN",
-  "description": "Learning how to train my own neural network",
+  "title": "Clip-framer",
+  "description": "I had a neat idea of an app that clips stuff automatically to save good moments",
   "link": "https://github.com/dicerollcodes/learning-nn",
-  "progress": 0,
-  "techStack": ["Python", "PyTorch", "NumPy", "Matplotlib"]
+  "progress": 20,
+  "techStack": ["JS", "Python (Flask)", "OpenAI", "Numpy"]
 } 

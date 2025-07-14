@@ -57,6 +57,7 @@ export default function Home() {
           <CurrentlyWorking />
         </div>
       </div>
+
     </Layout>
   );
 } 
