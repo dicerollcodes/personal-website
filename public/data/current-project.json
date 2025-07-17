@@ -1,7 +1,7 @@
 {
   "title": "Clip-framer",
-  "description": "I had a neat idea of an app that clips stuff automatically to save good moments",
-  "link": "https://github.com/dicerollcodes/learning-nn",
+  "description": "I had a neat idea of an app that clips stuff automatically to save good moments kind of like a highlight reel.",
+  "link": "https://github.com/dicerollcodes/clip-framer",
   "progress": 20,
   "techStack": ["JS", "Python (Flask)", "OpenAI", "Numpy"]
 } 
