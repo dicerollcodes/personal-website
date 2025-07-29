@@ -1,7 +1,7 @@
 {
-  "title": "Clip-framer",
-  "description": "I had a neat idea of an app that clips stuff automatically to save good moments kind of like a highlight reel.",
-  "link": "https://github.com/dicerollcodes/clip-framer",
-  "progress": 20,
-  "techStack": ["JS", "Python (Flask)", "OpenAI", "Numpy"]
+  "title": "Competitive Stock Trading",
+  "description": "I had a neat idea of an website kinda thing where ppl simulate trading stocks w leaderboards and whatnot and im hoping eventually to incorporate that data into training a trading algo maybe who knows.",
+  "link": "https://github.com/dicerollcodes/competitive-stock-trading",
+  "progress": 0,
+  "techStack": ["TBD"]
 } 

@@ -32,8 +32,8 @@ export default function Home() {
               ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
             `} style={{ transitionDelay: '0ms' }}>
               I'm Justin Bustamante, an aspiring software engineer and a student majoring in computer science and math at Rutgers University-New Brunswick. 
-              I love building computers, playing video games (currently addicted to Overwatch 2 & Valorant but learning how to play Tekken 8), 
-              and listening to music. My current favorite artists are The Marias, beabadoobee, and LE&nbsp;SSERAFIM.
+              I love building computers, playing video games (currently addicted to Tekken 8 & Overwatch.), 
+              and listening to music. My current favorite artists are The Marias, Drake, and Travis Scott.
             </p>
           </div>
           
