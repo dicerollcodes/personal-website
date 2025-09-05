@@ -29,9 +29,9 @@ export default function Experience() {
       location: "Newark, NJ",
       date: "Sept. 2024 - May 2025",
       points: [
-        "Designed and built front-end logic through code analysis and optimization, increasing stability by 20%",
-        "Developed 10+ interactive features that enhanced engagement and streamlined navigation",
-        "Collaborated with cross-functional teams to deploy 5+ features, shortening release cycles"
+        "Developed an internal chatbot using Python and NLP libraries to assist engineers with documentation queries, reducing onboarding time by 15%.",
+        "Resolved 40+ front-end bugs across React components, reducing UI-related error reports by 25%.",
+        "Contributed to 12+ production features and code changes, ensuring smooth deployments and improved platform stability."
       ]
     },
     {

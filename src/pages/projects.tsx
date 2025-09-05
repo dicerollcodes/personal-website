@@ -40,22 +40,22 @@ export default function Projects() {
   const projects = [
     {
       title: "Robotics Assistant",
-      tech: "Python, HTML, Flask, Flask-Session, OpenAI API, pdf2image, Pillow (PIL)",
+      tech: "Python, HTML, OpenAI API",
       points: [
         "Designed an AI assistant that improved team communication and boosted collaboration by 25%",
-        "Integrated features that attracted 10+ new members"
+        "Integrated features that attracted 20+ new members"
       ]
     },
     {
       title: "Personal Portfolio Website",
-      tech: "React, Next.js, TailwindCSS",
+      tech: "React, Node.js, TailwindCSS, Typescript",
       points: [
-        "Developed a responsive portfolio website that enhanced user experience and attracted 500+ visitors",
+        "Developed a responsive portfolio website that enhanced user experience and attracted 800+ visitors",
       ]
     },
     {
       title: "FRC Team 714 Scouting Application",
-      tech: "React, TypeScript, Express.js, TailwindCSS",
+      tech: "React, Node.js, MongoDB, Express.js, TailwindCSS",
       points: [
         "Developed a full-stack scouting application for FIRST Robotics Competition that tracked 100+ teams throughout the 2025 season",
         "Improved match planning by 25% with comprehensive team data and performance analytics"
